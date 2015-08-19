@@ -41,7 +41,7 @@
                           parent="${PinkyPitch1ParentLinkName}" child="${PinkyPitch1LinkName}"
                           origin_xyz="${PinkyPitch1FrameOrigin_X} ${PinkyPitch1FrameOrigin_Y} ${PinkyPitch1FrameOrigin_Z}"
                           origin_rpy="${PinkyPitch1FrameOrientation_Roll} ${PinkyPitch1FrameOrientation_Pitch} ${PinkyPitch1FrameOrientation_Yaw}">
-        <limit effort="${PinkyPitch1TorqueLimit}" lower="${PinkyPitch1PositionLimit_Lower}" upper="${PinkyPitch1PositionLimit_Upper}" velocity="${PinkyPitch1VelocityLimit}"/>
+        <limit effort="${PinkyFingerPitch1TorqueLimit}" lower="${PinkyFingerPitch1PositionLimit_Lower}" upper="${PinkyFingerPitch1PositionLimit_Upper}" velocity="${PinkyFingerPitch1VelocityLimit}"/>
     </xacro:fixed_joint>
 
     <xacro:fixed_joint jointName="${PinkyPitch2JointName}"
