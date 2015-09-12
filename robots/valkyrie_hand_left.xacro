@@ -1,0 +1,41 @@
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="valkyrie_hand_left">
+    <xacro:property name="mesh_root" value="package://val_description/meshes"/>
+    <xacro:property name="prefix" value="Left"/>
+    <xacro:property name="reflect" value="1"/>
+    <xacro:property name="WristPitchLinkName" value="LeftPalm"/>
+
+    <xacro:include filename="$(find val_description)/robots/common/generic_models.xacro" />
+    <xacro:include filename="$(find val_description)/robots/valkyrie_A/xacro/common/common_bodies.xacro" />
+
+
+    <link name="plane::xy::base">
+      <inertial>
+        <mass value="0.1"/>
+        <origin rpy="0 0 0" xyz="0 0 0.0"/>
+        <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+      </inertial>
+    </link>
+    <joint name="left_valkyrie_hand_joint" type="fixed">
+      <origin rpy="0 1.57 1.57" xyz="0 0 0"/>
+      <parent link="plane::xy::base"/>
+      <child link="${WristPitchLinkName}"/>
+    </joint>
+
+    <xacro:standard_link name="${WristPitchLinkName}"
+                    mass="${PalmMass}"
+                    origin_xyz="${PalmComPosition}"
+                    ixx="${PalmInertia_IXX}" ixy="${PalmInertia_IXY}" ixz="${PalmInertia_IXZ}"
+                    iyy="${PalmInertia_IYY}" iyz="${PalmInertia_IYZ}" izz="${PalmInertia_IZZ}"
+                    origin_rpy="0 0 0"
+                    visual_mesh="${mesh_root}/arms/palm_${prefix}.dae"
+                    material="Gold"
+                    collision_mesh="${mesh_root}/arms/palm_${prefix}.dae"/>
+
+    <xacro:make_thumb prefix="Left" reflect="1" thumb_root_link="LeftPalm"/>
+
+    <xacro:make_index_finger prefix="Left" reflect="1" index_finger_root_link="LeftPalm"/>
+
+    <xacro:make_middle_finger prefix="Left" reflect="1" middle_finger_root_link="LeftPalm"/>
+
+    <xacro:make_pinky_finger prefix="Left" reflect="1" pinky_finger_root_link="LeftPalm"/>
+</robot>
