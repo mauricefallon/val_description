@@ -1,11 +1,11 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="valkyrie_hand_left">
-    <xacro:property name="mesh_root" value="package://val_description/meshes"/>
-    <xacro:property name="prefix" value="Left"/>
+    <xacro:property name="mesh_root" value="package://val_description/model/meshes"/>
+    <xacro:property name="prefix" value="left"/>
     <xacro:property name="reflect" value="1"/>
-    <xacro:property name="WristPitchLinkName" value="LeftPalm"/>
+    <xacro:property name="WristPitchLinkName" value="leftPalm"/>
 
-    <xacro:include filename="$(find val_description)/robots/common/generic_models.xacro" />
-    <xacro:include filename="$(find val_description)/robots/valkyrie_A/xacro/common/common_bodies.xacro" />
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/generic_models.xacro" />
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/common_bodies.xacro" />
 
 
     <link name="plane::xy::base">
@@ -31,11 +31,11 @@
                     material="Gold"
                     collision_mesh="${mesh_root}/arms/palm_${prefix}.dae"/>
 
-    <xacro:make_thumb prefix="Left" reflect="1" thumb_root_link="LeftPalm"/>
+    <xacro:make_thumb prefix="left" reflect="1" thumb_root_link="leftPalm"/>
 
-    <xacro:make_index_finger prefix="Left" reflect="1" index_finger_root_link="LeftPalm"/>
+    <xacro:make_index_finger prefix="left" reflect="1" index_finger_root_link="leftPalm"/>
 
-    <xacro:make_middle_finger prefix="Left" reflect="1" middle_finger_root_link="LeftPalm"/>
+    <xacro:make_middle_finger prefix="left" reflect="1" middle_finger_root_link="leftPalm"/>
 
-    <xacro:make_pinky_finger prefix="Left" reflect="1" pinky_finger_root_link="LeftPalm"/>
+    <xacro:make_pinky_finger prefix="left" reflect="1" pinky_finger_root_link="leftPalm"/>
 </robot>
