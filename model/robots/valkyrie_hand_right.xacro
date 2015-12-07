@@ -28,7 +28,6 @@
                     iyy="${PalmInertia_IYY}" iyz="${PalmInertia_IYZ}" izz="${PalmInertia_IZZ}"
                     origin_rpy="0 0 0"
                     visual_mesh="${mesh_root}/arms/palm_${prefix}.dae"
-                    material="Gold"
                     collision_mesh="${mesh_root}/arms/palm_${prefix}.dae"/>
 
     <xacro:make_thumb prefix="right" reflect="-1" thumb_root_link="rightPalm"/>
