@@ -7,6 +7,4 @@
     <xacro:include filename="$(find val_description)/common/xacro/serial_numbers/valkyrie_A_serials.xacro"/>
     <xacro:include filename="$(find val_description)/common/xacro/dev_ports/valkyrie_A_ports.xacro"/>
 
-    <xacro:include filename="edinburgh_mods.xacro"/>
-
 </robot>
