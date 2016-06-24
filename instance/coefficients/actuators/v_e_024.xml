@@ -33,7 +33,7 @@
         <Coeff id="JointSensors_OutputVelocity" value="1.0" />
         <Coeff id="LoadCell_MountingGain" value="1.0" />
         <Coeff id="LoadCell_OffsetBits" value="32920" />
-        <Coeff id="PositionOffset_Rad" value="2.58168961067" />
+        <Coeff id="PositionOffset_Rad" value="2.58705855865" />
         <Coeff id="JointOutputAPS_MountingGain" value="-1.0" />
         <Coeff id="SpringAPS_BitOffset" value="4826012" />
         <Coeff id="SpringAPS_MountingGain" value="-1.0" />

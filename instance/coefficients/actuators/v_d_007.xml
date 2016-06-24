@@ -21,7 +21,7 @@
         <Coeff id="JointSensors_OutputPosition" value="2.0" />
         <Coeff id="PositionControl_MotorTorqueDirection" value="1.0" />
         <Coeff id="PositionControl_enableInLPF" value="1.0" />
-        <Coeff id="PositionOffset_Rad" value="-1.30115075445" />
+        <Coeff id="PositionOffset_Rad" value="-1.30268438508" />
         <Coeff id="JointOutputAPS_MountingGain" value="-1.0" />
         <Coeff id="SpringAPS_BitOffset" value="653820700.0" />
         <Coeff id="SpringAPS_MountingGain" value="-1.0" />

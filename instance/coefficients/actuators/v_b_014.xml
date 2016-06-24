@@ -15,7 +15,7 @@
         <Coeff description="hard limit, radians" id="JointMaxValue" value="3.14159265359" />
         <Coeff description="hard limit, radians" id="JointMinValue" value="-3.14159265359" />
         <Coeff description="" id="TorqueOffset_Nm" value="4.82464709457" />
-        <Coeff description="" id="PositionOffset_Rad" value="0.632249162675" />
+        <Coeff description="" id="PositionOffset_Rad" value="0.636087924958" />
         <Coeff description="Incremental Encoder Enabled" id="JointSensors_MotorPosition" value="1" />
         <Coeff description="V1 actuator magnetic aps" id="JointSensors_OutputPosition" value="2.0" />
         <Coeff description="" id="JointSensors_OutputForce" value="2.0" />

@@ -14,7 +14,7 @@
         <Coeff description="" id="JointMaxValue" value="3.14159265359" />
         <Coeff description="" id="JointMinValue" value="-3.14159265359" />
         <Coeff description="" id="TorqueOffset_Nm" value="-1.49900554028" />
-        <Coeff description="" id="PositionOffset_Rad" value="-1.46801965396" />
+        <Coeff description="" id="PositionOffset_Rad" value="-1.4227672116" />
         <Coeff description="" id="JointSensors_MotorPosition" value="1" />
         <Coeff description="" id="JointSensors_OutputForce" value="2.0" />
         <Coeff description="" id="JointSensors_OutputPosition" value="2.0" />

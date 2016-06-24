@@ -23,7 +23,7 @@
         <Coeff id="PositionControl_Input_fc_Hz" value="30.0" />
         <Coeff id="PositionControl_MotorTorqueDirection" value="1.0" />
         <Coeff id="PositionControl_enableInLPF" value="1.0" />
-        <Coeff id="PositionOffset_Rad" value="1.03543741912" />
+        <Coeff id="PositionOffset_Rad" value="1.03927214355" />
         <Coeff id="JointOutputAPS_MountingGain" value="1.0" />
         <Coeff id="SpringAPS_BitOffset" value="856170658" />
         <Coeff id="SpringAPS_MountingGain" value="-1.0" />
