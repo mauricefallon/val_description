@@ -9,7 +9,6 @@
         <Coeff id="EncoderIndexOffset" value="0.5894" description="Electrical angle offset from Index pulse of Encoder" />
         <Coeff id="JointKinematicDir" value="-1.0" description="Kinematic direction of joint" />
         <Coeff id="TorqueOffset_Nm" value="33.4089773991" description="" />
-        <Coeff id="JointSafety_LimitZone_Rad" value="0.07" />
         <Coeff id="PositionOffset_Rad" value="0.384262561798" description="" />
         <Coeff id="JointSensors_MotorPosition" value="1" description="Incremental Encoder Enabled" />
         <Coeff id="JointSensors_OutputPosition" value="2.0" description="V1 actuator magnetic aps" />

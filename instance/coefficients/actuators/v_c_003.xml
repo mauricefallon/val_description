@@ -8,7 +8,6 @@
         <Coeff id="EncMountingDir" value="1.0" />
         <Coeff id="EncoderIndexOffset" value="0.0954" />
         <Coeff id="JointKinematicDir" value="-1.0" />
-        <Coeff id="JointSafety_LimitZone_Rad" value="0.07" />
         <Coeff id="JointSensors_MotorPosition" value="1.0" />
         <Coeff id="JointSensors_OutputForce" value="2.0" />
         <Coeff id="JointSensors_OutputPosition" value="2.0" />

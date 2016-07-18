@@ -18,7 +18,6 @@
         <Coeff id="JointKinematicDir" value="-1.0" />
         <Coeff id="JointMaxValue" value="3.14159" />
         <Coeff id="JointMinValue" value="-3.14159" />
-        <Coeff id="JointSafety_LimitZone_m" value="0.0005" />
         <Coeff id="JointSafety_LowerLimit_m" value="-0.09" />
         <Coeff id="JointSafety_UpperLimit_m" value="0.09" />
         <Coeff id="JointSensors_LinearPosition" value="2.0" />

@@ -1,7 +1,6 @@
 <CoeffData>
   <Coeffs>
     <Coeff id="Commutation_Select" value="2.0"/>
-    <Coeff id="CurrVelFilter_fc_Hz" value="100.0"/>
     <Coeff id="DeadTimeCompensation" value="0.02"/>
     <Coeff id="JointVelFilter_fc_Hz" value="100.0"/>
     <Coeff id="MotorAccFilter_fc_Hz" value="50.0"/>

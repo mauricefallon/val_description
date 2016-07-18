@@ -4,6 +4,7 @@
   <ScheduleFile id="turbo.yaml" />
   <Coeffs>
     <Coeff id="JointTorqueLimit_Nm" value="65.0"/>
+    <Coeff id="JointSafety_LimitZone_Rad" value="0.07" />
     <Coeff id="CurrentSafeLimit" value="8.5"/>
     <Coeff id="EncoderCPR" value="543.0"/>
     <Coeff id="FluxLinkage" value="0.01578"/>

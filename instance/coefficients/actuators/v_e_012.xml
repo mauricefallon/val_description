@@ -13,7 +13,6 @@
         <Coeff id="EncoderIndexOffset" value="4.84" />
         <Coeff id="ForceOffset_N" value="38.55037117" />
         <Coeff id="JointKinematicDir" value="-1.0" />
-        <Coeff id="JointSafety_LimitZone_m" value="0.0005" />
         <Coeff id="JointSensors_LinearPosition" value="2.0" />
         <Coeff id="JointSensors_LinearVelocity" value="2.0" />
         <Coeff id="JointSensors_MotorPosition" value="1.0" />
