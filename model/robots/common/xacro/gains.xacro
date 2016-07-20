@@ -1,5 +1,8 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="valkyrie_nodes">
 
+    <xacro:property name="ForearmYawKp" value="20000" />
+    <xacro:property name="ForearmYawKd" value="400" />
+    <xacro:property name="ForearmYawKi" value="0.0" />
     <xacro:property name="WristPitchKp" value="20000" />
     <xacro:property name="WristPitchKd" value="400" />
     <xacro:property name="WristPitchKi" value="0.0" />
