@@ -6,10 +6,12 @@
 	<xacro:include filename="$(find val_description)/common/xacro/serial_numbers/forearm_testbench_serials.xacro" />
     <xacro:include filename="$(find val_description)/instance/instances/robots/xacro/mechanisms/mechanisms.xacro"/>
     <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/firmware/valkyrie_firmware.xacro"/>
 
     <Channels>
 
     </Channels>
+	<xacro:firmware_base_url/>
 
     <Mechanisms>
     <xacro:simple_mechanism name="testbench_actuator" serial_number="${forearm_yaw_serial_number}" node="${testbench_node}" processor_firmware="" fpga_firmware=""/>
