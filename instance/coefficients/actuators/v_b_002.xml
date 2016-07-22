@@ -1,9 +1,9 @@
 <CoeffData>
-    <ClassFile id="b.xml"/>
-    <ControllerFile id="b_sv.xml"/>
-    <LocationFile id="hip_roll_left.xml"/>
-    <SensorsFile id="sensors.xml"/>
-    <SafetyFile id="safety.xml"/>
+    <ClassFile id="b.xml" />
+    <ControllerFile id="b_sv.xml" />
+    <LocationFile id="hip_roll_left.xml" />
+    <SensorsFile id="sensors.xml" />
+    <SafetyFile id="safety.xml" />
     <Coeffs>
         <Coeff id="EncMountingDir" value="-1.0" />
         <Coeff id="EncoderIndexOffset" value="5.66" />
@@ -16,6 +16,6 @@
         <Coeff id="PositionOffset_Rad" value="2.11612731142" />
         <Coeff id="SpringAPS_BitOffset" value="94921038.0" />
         <Coeff id="SpringAPS_MountingGain" value="-1.0" />
-        <Coeff id="TorqueOffset_Nm" value="3.81371245236" />
+        <Coeff id="TorqueOffset_Nm" value="5.99921492539" />
     </Coeffs>
 </CoeffData>

@@ -16,6 +16,6 @@
         <Coeff id="PositionOffset_Rad" value="-0.470932087712" />
         <Coeff id="SpringAPS_BitOffset" value="895749000.0" />
         <Coeff id="SpringAPS_MountingGain" value="-1.0" />
-        <Coeff id="TorqueOffset_Nm" value="-1.69590027065" />
+        <Coeff id="TorqueOffset_Nm" value="-1.32921793865" />
     </Coeffs>
 </CoeffData>
