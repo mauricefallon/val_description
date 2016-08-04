@@ -6,7 +6,7 @@ import getpass
 import socket
 
 d = generate_distutils_setup(
-    packages=['vanguard_clients'],
+    packages=['val_description'],
     package_dir={'': 'src'}
 )
 
