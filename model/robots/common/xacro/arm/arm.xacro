@@ -135,7 +135,7 @@
                           axis="${ForearmYawRotationAxis}"
                           damping="0.1" friction="0.0">
         <limit effort="${ForearmYawTorqueLimit}" lower="${ForearmYawPositionLimit_Lower}" upper="${ForearmYawPositionLimit_Upper}" velocity="${ForearmYawVelocityLimit}"/>
-        <controller_gains Kp="0.0" Kd="0" Ki="0.0"/>
+        <controller_gains Kp="${ForearmYawKp}" Kd="${ForearmYawKd}" Ki="${ForearmYawKi}"/>
     </xacro:revolute_joint_ex>
 
     <xacro:revolute_joint_ex jointName="${WristRollJointName}"

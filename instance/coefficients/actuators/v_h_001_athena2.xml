@@ -1,13 +1,13 @@
 <CoeffData>
   <Coeffs>
-    <Coeff description="" value="768" id="Fing1_elecoffset"/>
-    <Coeff description="" value="1805" id="Fing1_APSoffset"/>
-    <Coeff description="" value="256" id="Fing2_elecoffset"/>
-    <Coeff description="" value="5618" id="Fing2_APSoffset"/>
-    <Coeff description="" value="512" id="Fing3_elecoffset"/>
-    <Coeff description="" value="4735" id="Fing3_APSoffset"/>
-    <Coeff description="" value="0" id="Fing4_elecoffset"/>
-    <Coeff description="" value="7101" id="Fing4_APSoffset"/>
+    <Coeff description="" value="0" id="Fing1_elecoffset"/>
+    <Coeff description="" value="189" id="Fing1_APSoffset"/>
+    <Coeff description="" value="535" id="Fing2_elecoffset"/>
+    <Coeff description="" value="4258" id="Fing2_APSoffset"/>
+    <Coeff description="" value="0" id="Fing3_elecoffset"/>
+    <Coeff description="" value="2624" id="Fing3_APSoffset"/>
+    <Coeff description="" value="140" id="Fing4_elecoffset"/>
+    <Coeff description="" value="4920" id="Fing4_APSoffset"/>
     <Coeff description="" value="100" id="Fing1_locmdlmt"/>
     <Coeff description="" value="5214" id="Fing1_hicmdlmt"/>
     <Coeff description="" value="1" id="Fing1_posKP"/>

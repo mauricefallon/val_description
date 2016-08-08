@@ -4,8 +4,8 @@
     <Coeff description="" value="-1461.0039" id="Yaw_offset"/>
     <Coeff description="" value="0.000767" id="Pitch_cnvtrad"/>
     <Coeff description="" value="-0.000767" id="Yaw_cnvtrad"/>
-    <Coeff description="" value="768" id="Fing3_elecoffset"/>
-    <Coeff description="" value="0" id="Fing3_APSoffset"/>
+    <Coeff description="" value="512" id="Fing3_elecoffset"/>
+    <Coeff description="" value="-2353" id="Fing3_APSoffset"/>
     <Coeff description="" value="1000" id="Pitch_hilmt"/>
     <Coeff description="" value="-1000" id="Pitch_lolmt"/>
     <Coeff description="" value="1000" id="Yaw_hilmt"/>
@@ -14,7 +14,7 @@
     <Coeff description="" value="-0.087266" id="thumb_locmdlmt"/>
     <Coeff description="" value="-200" id="thumb_posKP"/>
     <Coeff description="" value="0" id="thumb_posKD"/>
-    <Coeff description="" value="1000" id="thumb_dutylmt"/>
+    <Coeff description="" value="50" id="thumb_dutylmt"/>
     <Coeff description="" value="0" id="WL_Torq_KP"/>
     <Coeff description="" value="0" id="WL_Torq_KD"/>
     <Coeff description="" value="1671" id="WL_hiposcmdlmt"/>

@@ -3,7 +3,7 @@
 	<xacro:property name="leftLegJ1SerialNumber" value="v_a_006" />
 	<xacro:property name="leftLegJ2SerialNumber" value="v_b_002" />
 	<xacro:property name="leftLegJ3SerialNumber" value="v_c_002" />
-	<xacro:property name="leftLegJ4SerialNumber" value="v_d_001" />
+	<xacro:property name="leftLegJ4SerialNumber" value="v_d_005" />
 	<xacro:property name="leftAnkleLeftActuatorSerialNumber" value="v_e_001" />
 	<xacro:property name="leftAnkleRightActuatorSerialNumber" value="v_e_002" />
 
