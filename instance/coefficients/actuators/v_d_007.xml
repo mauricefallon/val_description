@@ -16,6 +16,6 @@
         <Coeff id="JointOutputAPS_MountingGain" value="-1.0" />
         <Coeff id="SpringAPS_BitOffset" value="653820700.0" />
         <Coeff id="SpringAPS_MountingGain" value="-1.0" />
-        <Coeff id="TorqueOffset_Nm" value="-8.20250527771" />
+        <Coeff id="TorqueOffset_Nm" value="-9.37192004648" />
     </Coeffs>
 </CoeffData>
