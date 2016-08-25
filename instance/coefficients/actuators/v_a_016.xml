@@ -7,7 +7,7 @@
     <Coeffs>
         <Coeff description="" id="JointKinematicDir" value="-1.0" />
         <Coeff description="" id="PositionOffset_Rad" value="-0.955670036369" />
-        <Coeff description="" id="TorqueOffset_Nm" value="-4.76520374967" />
+        <Coeff description="" id="TorqueOffset_Nm" value="-4.87711257376" />
         <Coeff description="" id="JointSensors_MotorPosition" value="1" />
         <Coeff description="" id="JointSensors_OutputForce" value="2.0" />
         <Coeff description="" id="JointSensors_OutputPosition" value="2.0" />
