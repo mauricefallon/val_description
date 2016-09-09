@@ -8,11 +8,11 @@ The val_description package contains the files needed to generate an URDF for Va
 
 The URDF's are generated when you `catkin_make install` a Catkin workspace that contains val_description. 
 
-# Credits
+#### Credits
 - Johnson Space Center - ER4 - Valkyrie Team
 - IHMC humanoids group
 - Maurice Fallon and his group
 - Open Source Robotics Foundation(OSRF)
 
-# License
+#### License
 - NASA-1.3
