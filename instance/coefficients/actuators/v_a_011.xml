@@ -6,8 +6,8 @@
     <SafetyFile id="safety.xml" />
     <Coeffs>
         <Coeff description="" id="JointKinematicDir" value="1.0" />
-        <Coeff description="" id="PositionOffset_Rad" value="1.90213607946" />
-        <Coeff description="" id="TorqueOffset_Nm" value="-2.45154144709" />
+        <Coeff description="" id="PositionOffset_Rad" value="1.90136908887" />
+        <Coeff description="" id="TorqueOffset_Nm" value="-2.98642140776" />
         <Coeff description="" id="JointSensors_MotorPosition" value="1" />
         <Coeff description="" id="JointSensors_OutputForce" value="2.0" />
         <Coeff description="" id="JointSensors_OutputPosition" value="2.0" />

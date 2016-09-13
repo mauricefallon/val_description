@@ -11,7 +11,7 @@
     <Coeffs>
         <Coeff id="EncMountingDir" value="1.0" />
         <Coeff id="EncoderIndexOffset" value="2.36" />
-        <Coeff id="ForceOffset_N" value="-10.9850825072" />
+        <Coeff id="ForceOffset_N" value="114.428043485" />
         <Coeff id="JointKinematicDir" value="-1.0" />
         <Coeff id="JointSensors_LinearPosition" value="2.0" />
         <Coeff id="JointSensors_LinearVelocity" value="2.0" />
@@ -21,7 +21,7 @@
         <Coeff id="JointSensors_OutputVelocity" value="1.0" />
         <Coeff id="LoadCell_MountingGain" value="1.0" />
         <Coeff id="LoadCell_OffsetBits" value="32950.0" />
-        <Coeff id="PositionOffset_Rad" value="-0.860563143349" />
+        <Coeff id="PositionOffset_Rad" value="-0.864398106194" />
         <Coeff id="JointOutputAPS_MountingGain" value="1.0" />
         <Coeff id="SpringAPS_BitOffset" value="4859800.0" />
         <Coeff id="SpringAPS_MountingGain" value="-1.0" />

@@ -6,8 +6,8 @@
     <SafetyFile id="safety.xml" />
     <Coeffs>
         <Coeff description="Kinematic direction of joint" id="JointKinematicDir" value="-1.0" />
-        <Coeff description="" id="TorqueOffset_Nm" value="-5.27164900046" />
-        <Coeff description="" id="PositionOffset_Rad" value="-2.7033849392" />
+        <Coeff description="" id="TorqueOffset_Nm" value="-2.6219867704" />
+        <Coeff description="" id="PositionOffset_Rad" value="-2.69955413342" />
         <Coeff description="Incremental Encoder Enabled" id="JointSensors_MotorPosition" value="1" />
         <Coeff description="V1 actuator magnetic aps" id="JointSensors_OutputPosition" value="2.0" />
         <Coeff description="" id="JointSensors_OutputForce" value="2.0" />
