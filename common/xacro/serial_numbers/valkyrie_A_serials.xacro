@@ -1,11 +1,11 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="valkyrie_A_serials">
 
 	<xacro:property name="leftLegJ1SerialNumber" value="v_a_006" />
-	<xacro:property name="leftLegJ2SerialNumber" value="v_b_006" />
-    <xacro:property name="leftLegJ3SerialNumber" value="v_c_004" />
-    <xacro:property name="leftLegJ4SerialNumber" value="v_d_003" />
-    <xacro:property name="leftAnkleLeftActuatorSerialNumber" value="v_e_019" />
-    <xacro:property name="leftAnkleRightActuatorSerialNumber" value="v_e_020" />
+	<xacro:property name="leftLegJ2SerialNumber" value="v_b_016" />
+	<xacro:property name="leftLegJ3SerialNumber" value="v_c_008" />
+	<xacro:property name="leftLegJ4SerialNumber" value="v_d_008" />
+	<xacro:property name="leftAnkleLeftActuatorSerialNumber" value="v_e_016" />
+	<xacro:property name="leftAnkleRightActuatorSerialNumber" value="v_e_015" />
 
 	<xacro:property name="rightLegJ1SerialNumber" value="v_a_003" />
 	<xacro:property name="rightLegJ2SerialNumber" value="v_b_001" />
@@ -37,7 +37,7 @@
 	<xacro:property name="leftForearmSerialNumber" value="v_h_007"/>
     <xacro:property name="rightForearmSerialNumber" value="v_h_008"/>
 
-	<xacro:property name="left_foot_ATI_serial" value="FT16594" />
+	<xacro:property name="left_foot_ATI_serial" value="FT17218" />
 	<xacro:property name="right_foot_ATI_serial" value="FT16592" />
 
 	<xacro:property name="sim_ATI_serial" value="FT001SIM" />
