@@ -11,7 +11,7 @@
     <Coeffs>
         <Coeff id="EncMountingDir" value="1.0" />
         <Coeff id="EncoderIndexOffset" value="0.609" />
-        <Coeff id="ForceOffset_N" value="28.8731908798" />
+        <Coeff id="ForceOffset_N" value="36.3284225464" />
         <Coeff id="JointKinematicDir" value="-1.0" />
         <Coeff id="JointSensors_LinearPosition" value="2.0" />
         <Coeff id="JointSensors_LinearVelocity" value="2.0" />
