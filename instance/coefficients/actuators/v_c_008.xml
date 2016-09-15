@@ -16,6 +16,6 @@
     <Coeff description="Direction the sensor is mounted in" id="SpringAPS_MountingGain" value="1.0" />
     <Coeff description="Renishaw offset in bits" id="SpringAPS_BitOffset" value="848215659" />
     <Coeff description="Position Offset in radians" id="PositionOffset_Rad" value="0.0452524286237" />
-    <Coeff description="" id="TorqueOffset_Nm" value="5.70167741702" />
+    <Coeff description="" id="TorqueOffset_Nm" value="2.1621408118" />
   </Coeffs>
 </CoeffData>
