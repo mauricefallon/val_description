@@ -15,7 +15,7 @@
         <Coeff id="EncoderIndexOffset" value="3.78" />
         <Coeff id="JointKinematicDir" value="1.0" />
         <Coeff id="SpringAPS_BitOffset" value="1033209000.0" />
-        <Coeff id="TorqueOffset_Nm" value="3.95940098472" />
+        <Coeff id="TorqueOffset_Nm" value="1.92225318738" />
         <Coeff id="PositionOffset_Rad" value="2.02715586736" />
     </Coeffs>
 </CoeffData>
