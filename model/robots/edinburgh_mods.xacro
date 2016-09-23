@@ -1,0 +1,183 @@
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="valkyrie">
+  <!-- drake feet mods-->
+  <frame link="leftFoot" name="l_foot_sole" rpy="0 0 0" xyz="0.067  0 -0.09"/>
+  <frame link="rightFoot" name="r_foot_sole" rpy="0 0 0" xyz="0.067 0 -0.09"/>
+  <frame link="leftFoot" name="l_foot_toe" rpy="0 0 0" xyz="0.172  0 -0.09"/>
+  <frame link="rightFoot" name="r_foot_toe" rpy="0 0 0" xyz="0.172 0 -0.09"/>
+  <!-- end drake feet mods-->
+  <!-- drake left hand frames-->
+  <link name="l_hand_force_torque">
+    <inertial>
+      <mass value="0.001"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="l_hand_force_torque_joint" type="fixed">
+    <origin rpy="-1.57079632679 0 1.57079632679" xyz="0 0 0"/>
+    <parent link="leftPalm"/>
+    <child link="l_hand_force_torque"/>
+  </joint>
+  <link name="left_palm">
+    <inertial>
+      <mass value="0.001"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="left_valkyrie_hand_joint" type="fixed">
+    <origin rpy="1.57079632679 1.57079632679 0" xyz="0.08 0 0"/>
+    <parent link="l_hand_force_torque"/>
+    <child link="left_palm"/>
+  </joint>
+  <link name="l_hand_face">
+    <inertial>
+      <mass value="0.001"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
+    </inertial>
+  </link>
+  <joint name="l_hand_face_joint" type="fixed">
+    <origin rpy="3.14159265359 0 1.57079632679" xyz="0.06 0.0 -0.045"/>
+    <parent link="l_hand_force_torque"/>
+    <child link="l_hand_face"/>
+  </joint>
+  <!-- end drake left hand frames-->
+  <!-- drake right hand frames-->
+  <link name="r_hand_force_torque">
+    <inertial>
+      <mass value="0.001"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="r_hand_force_torque_joint" type="fixed">
+    <origin rpy="-1.57079632679 0 -1.57079632679" xyz="0 0 0"/>
+    <parent link="rightPalm"/>
+    <child link="r_hand_force_torque"/>
+  </joint>
+  <link name="right_palm">
+    <inertial>
+      <mass value="0.001"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="right_valkyrie_hand_joint" type="fixed">
+    <origin rpy="0 -1.57079632679 -1.57079632679" xyz="0.08 0 0"/>
+    <parent link="r_hand_force_torque"/>
+    <child link="right_palm"/>
+  </joint>
+  <link name="r_hand_face">
+    <inertial>
+      <mass value="0.001"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
+    </inertial>
+  </link>
+  <joint name="r_hand_face_joint" type="fixed">
+    <origin rpy="0 0 -1.57079632679" xyz="0.06 0 0.045"/>
+    <parent link="r_hand_force_torque"/>
+    <child link="r_hand_face"/>
+  </joint>
+  <!-- end drake right hand frames-->
+  <!-- drake collision free groups-->
+  <collision_filter_group name="feet">
+    <member link="leftFoot"/>
+    <member link="rightFoot"/>
+    <ignored_collision_filter_group collision_filter_group="feet"/>
+  </collision_filter_group>
+  <collision_filter_group name="core">
+    <member link="torso"/>
+    <member link="torsoYawLink"/>
+    <member link="torsoPitchLink"/>
+    <member link="pelvis"/>
+    <member link="lowerNeckPitchLink"/>
+    <member link="neckYawLink"/>
+    <member link="upperNeckPitchLink"/>
+    <member link="head"/>
+    <ignored_collision_filter_group collision_filter_group="core"/>
+  </collision_filter_group>
+  <collision_filter_group name="ignore_core">
+    <member link="rightShoulderRollLink"/>
+    <member link="leftShoulderRollLink"/>
+    <member link="rightShoulderPitchLink"/>
+    <member link="leftShoulderPitchLink"/>
+    <ignored_collision_filter_group collision_filter_group="core"/>
+  </collision_filter_group>
+  <collision_filter_group name="r_uleg">
+    <member link="rightHipYawLink"/>
+    <member link="rightHipRollLink"/>
+    <member link="rightHipPitchLink"/>
+    <ignored_collision_filter_group collision_filter_group="core"/>
+    <ignored_collision_filter_group collision_filter_group="r_uleg"/>
+    <ignored_collision_filter_group collision_filter_group="l_uleg"/>
+  </collision_filter_group>
+  <collision_filter_group name="l_uleg">
+    <member link="leftHipYawLink"/>
+    <member link="leftHipRollLink"/>
+    <member link="leftHipPitchLink"/>
+    <ignored_collision_filter_group collision_filter_group="core"/>
+    <ignored_collision_filter_group collision_filter_group="r_uleg"/>
+    <ignored_collision_filter_group collision_filter_group="l_uleg"/>
+  </collision_filter_group>
+  <collision_filter_group name="r_leg">
+    <member link="rightKneePitchLink"/>
+    <member link="rightAnklePitchLink"/>
+    <member link="rightFoot"/>
+    <ignored_collision_filter_group collision_filter_group="r_leg"/>
+    <ignored_collision_filter_group collision_filter_group="r_uleg"/>
+  </collision_filter_group>
+  <collision_filter_group name="l_leg">
+    <member link="leftKneePitchLink"/>
+    <member link="leftAnklePitchLink"/>
+    <member link="leftFoot"/>
+    <ignored_collision_filter_group collision_filter_group="l_leg"/>
+    <ignored_collision_filter_group collision_filter_group="l_uleg"/>
+  </collision_filter_group>
+  <collision_filter_group name="r_arm">
+    <member link="rightShoulderPitchLink"/>
+    <member link="rightShoulderRollLink"/>
+    <member link="rightShoulderYawLink"/>
+    <member link="rightElbowPitchLink"/>
+    <member link="rightForearmLink"/>
+    <member link="rightWristRollLink"/>
+    <member link="rightPalm"/>
+    <ignored_collision_filter_group collision_filter_group="r_arm"/>
+  </collision_filter_group>
+  <collision_filter_group name="l_arm">
+    <member link="leftShoulderPitchLink"/>
+    <member link="leftShoulderRollLink"/>
+    <member link="leftShoulderYawLink"/>
+    <member link="leftElbowPitchLink"/>
+    <member link="leftForearmLink"/>
+    <member link="leftWristRollLink"/>
+    <member link="leftPalm"/>
+    <ignored_collision_filter_group collision_filter_group="l_arm"/>
+  </collision_filter_group>
+  <!-- end drake collision free groups-->
+</robot>

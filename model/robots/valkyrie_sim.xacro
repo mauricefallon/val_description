@@ -13,4 +13,6 @@
     <!-- Commenting out this next line until the harness makes it into a gazebo_ros_pkgs release -->
     <xacro:add_sim_harness harnessed_link="${TorsoRollLinkName}" />    
 
+    <xacro:include filename="edinburgh_mods.xacro"/>
+
 </robot>

@@ -37,44 +37,24 @@
                     visual_mesh="${mesh_root}/fingers/pinkyj3_${prefix}.dae"
                     collision_mesh="${mesh_root}/fingers/pinkyj3_${prefix}.dae"/>
 
-    <xacro:revolute_joint jointName="${PinkyPitch1JointName}"
+    <xacro:fixed_joint jointName="${PinkyPitch1JointName}"
                           parent="${PinkyPitch1ParentLinkName}" child="${PinkyPitch1LinkName}"
                           origin_xyz="${PinkyPitch1FrameOrigin_X} ${PinkyPitch1FrameOrigin_Y} ${PinkyPitch1FrameOrigin_Z}"
-                          origin_rpy="${PinkyPitch1FrameOrientation_Roll} ${PinkyPitch1FrameOrientation_Pitch} ${PinkyPitch1FrameOrientation_Yaw}"
-                          axis="${PinkyFingerPitch1RotationAxis}">
-        <xacro:if value="${(reflect+1)/2}">
-          <limit effort="${PinkyFingerPitch1TorqueLimit}" lower="${-reflect * PinkyFingerPitch1PositionLimit_Upper}" upper="${-reflect * PinkyFingerPitch1PositionLimit_Lower}" velocity="${PinkyFingerPitch1VelocityLimit}"/>
-        </xacro:if>
-        <xacro:if value="${(-reflect+1)/2}">
-          <limit effort="${PinkyFingerPitch1TorqueLimit}" lower="${PinkyFingerPitch1PositionLimit_Lower}" upper="${PinkyFingerPitch1PositionLimit_Upper}" velocity="${PinkyFingerPitch1VelocityLimit}"/>
-        </xacro:if>
-    </xacro:revolute_joint>
+                          origin_rpy="${PinkyPitch1FrameOrientation_Roll} ${PinkyPitch1FrameOrientation_Pitch} ${PinkyPitch1FrameOrientation_Yaw}">
+        <limit effort="${PinkyFingerPitch1TorqueLimit}" lower="${PinkyFingerPitch1PositionLimit_Lower}" upper="${PinkyFingerPitch1PositionLimit_Upper}" velocity="${PinkyFingerPitch1VelocityLimit}"/>
+    </xacro:fixed_joint>
 
-    <xacro:revolute_joint jointName="${PinkyPitch2JointName}"
+    <xacro:fixed_joint jointName="${PinkyPitch2JointName}"
                           parent="${PinkyPitch1LinkName}" child="${PinkyPitch2LinkName}"
                           origin_xyz="${PinkyPitch2FrameOrigin_X} ${PinkyPitch2FrameOrigin_Y} ${PinkyPitch2FrameOrigin_Z}"
-                          origin_rpy="${PinkyPitch2FrameOrientation_Roll} ${PinkyPitch2FrameOrientation_Pitch} ${PinkyPitch2FrameOrientation_Yaw}"
-                          axis="${PinkyFingerPitch2RotationAxis}">
-        <xacro:if value="${(reflect+1)/2}">
-          <limit effort="${PinkyFingerPitch2TorqueLimit}" lower="${-reflect * PinkyFingerPitch2PositionLimit_Upper}" upper="${-reflect * PinkyFingerPitch2PositionLimit_Lower}" velocity="${PinkyFingerPitch2VelocityLimit}"/>
-        </xacro:if>
-        <xacro:if value="${(-reflect+1)/2}">
-          <limit effort="${PinkyFingerPitch2TorqueLimit}" lower="${PinkyFingerPitch2PositionLimit_Lower}" upper="${PinkyFingerPitch2PositionLimit_Upper}" velocity="${PinkyFingerPitch2VelocityLimit}"/>
-        </xacro:if>
-    </xacro:revolute_joint>
+                          origin_rpy="${PinkyPitch2FrameOrientation_Roll} ${PinkyPitch2FrameOrientation_Pitch} ${PinkyPitch2FrameOrientation_Yaw}">
+    </xacro:fixed_joint>
 
-    <xacro:revolute_joint jointName="${PinkyPitch3JointName}"
+    <xacro:fixed_joint jointName="${PinkyPitch3JointName}"
                           parent="${PinkyPitch2LinkName}" child="${PinkyPitch3LinkName}"
                           origin_xyz="${PinkyPitch3FrameOrigin_X} ${PinkyPitch3FrameOrigin_Y} ${PinkyPitch3FrameOrigin_Z}"
-                          origin_rpy="${PinkyPitch3FrameOrientation_Roll} ${PinkyPitch3FrameOrientation_Pitch} ${PinkyPitch3FrameOrientation_Yaw}"
-                          axis="${PinkyFingerPitch3RotationAxis}">
-        <xacro:if value="${(reflect+1)/2}">
-          <limit effort="${PinkyFingerPitch3TorqueLimit}" lower="${-reflect * PinkyFingerPitch3PositionLimit_Upper}" upper="${-reflect * PinkyFingerPitch3PositionLimit_Lower}" velocity="${PinkyFingerPitch3VelocityLimit}"/>
-        </xacro:if>
-        <xacro:if value="${(-reflect+1)/2}">
-          <limit effort="${PinkyFingerPitch3TorqueLimit}" lower="${PinkyFingerPitch3PositionLimit_Lower}" upper="${PinkyFingerPitch3PositionLimit_Upper}" velocity="${PinkyFingerPitch3VelocityLimit}"/>
-        </xacro:if>
-    </xacro:revolute_joint>
+                          origin_rpy="${PinkyPitch3FrameOrientation_Roll} ${PinkyPitch3FrameOrientation_Pitch} ${PinkyPitch3FrameOrientation_Yaw}">
+    </xacro:fixed_joint>
 
   </xacro:macro>
 
