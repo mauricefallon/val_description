@@ -14,5 +14,6 @@
     <xacro:add_sim_harness harnessed_link="${TorsoRollLinkName}" />    
 
     <xacro:include filename="edinburgh_mods.xacro"/>
+    <xacro:include filename="mit_ft_frames_mods.xacro"/>
 
 </robot>

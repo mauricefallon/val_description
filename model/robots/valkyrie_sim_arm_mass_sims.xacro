@@ -10,6 +10,8 @@
     <xacro:include filename="$(find val_description)/model/robots/common/xacro/valkyrie_arm_mass_sims_base_sim.xacro"/>
     <xacro:include filename="$(find val_description)/model/robots/common/xacro/gazebo_harness.xacro"/>
 
-    <xacro:add_sim_harness harnessed_link="${TorsoRollLinkName}" />    
+    <xacro:add_sim_harness harnessed_link="${TorsoRollLinkName}" />
+
+    <xacro:include filename="mit_mods.xacro"/>    
 
 </robot>

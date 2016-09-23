@@ -1,0 +1,7 @@
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="valkyrie">
+  <!--- add force torque frames -->
+  <frame link="rightFoot" name="r_foot_force_torque" rpy="3.14 0.0 0.0" xyz="0.0215646 0.0 -0.051054"/>
+  <frame link="leftFoot" name="l_foot_force_torque" rpy="3.14 0.0 0.0" xyz="0.0215646 0.0 -0.051054"/>
+  <!-- end drake feet mods-->
+
+</robot>
