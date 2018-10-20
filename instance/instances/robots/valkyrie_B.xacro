@@ -1,4 +1,4 @@
-<robot xmlns:xacro="http://ros.org/wiki/xacro" name="valkyrie_B">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="valkyrie_B">
 
 	<xacro:property name="instance" value="valkyrie_B" />
 	<xacro:include filename="$(find val_description)/common/xacro/serial_numbers/valkyrie_B_serials.xacro" />

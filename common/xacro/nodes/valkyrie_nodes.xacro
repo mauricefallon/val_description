@@ -1,4 +1,4 @@
-<robot xmlns:xacro="http://ros.org/wiki/xacro" name="valkyrie_nodes">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="valkyrie_nodes">
 
 	<xacro:property name="HipYawNode" value="/pelvis/${prefix}_leg_j1" />
 	<xacro:property name="HipRollNode" value="/${prefix}_leg/j2" />
@@ -19,25 +19,7 @@
 	<xacro:property name="WristRollActuatorSimNode" value="/${prefix}_arm/wrist/roll_actautor" />
 	<xacro:property name="WristPitchActuatorSimNode" value="/${prefix}_arm/wrist/pitch_actuator" />
 
-	<xacro:property name="LowerNeckPitchNode" value="/neck/j1" />
-	<xacro:property name="NeckYawNode" value="/neck/j2" />
-	<xacro:property name="UpperNeckPitchNode" value="/neck/j3" />
-
-	<xacro:property name="TrunkYawNode" value="/pelvis/waist" /> <!--Yaw-->
-	<xacro:property name="WaistLeftActuatorNode" value="/trunk/left_actuator" /> <!--pitch-->
-	<xacro:property name="WaistRightActuatorNode" value="/trunk/right_actuator" /> <!--roll-->
-	<xacro:property name="WaistPitchActuatorSimNode" value="/trunk/pitch_actuator" /> <!--pitch-->
-	<xacro:property name="WaistRollActuatorSimNode" value="/trunk/roll_actuator" /> <!--roll-->
-
-	<xacro:property name="pelvis_imu1_node" value="/pelvis/sensors/imu1" />
-	<xacro:property name="pelvis_imu2_node" value="/pelvis/sensors/imu2" />
-	<xacro:property name="torso_imu1_node" value="/torso/sensors/imu1" />
-	<xacro:property name="torso_imu2_node" value="/torso/sensors/imu2" />
-
-	<xacro:property name="left_foot_ATI_node" value="/left_leg/ankle/left_actuator" />
-	<xacro:property name="left_foot_Sim_ATI_node" value="/sensors/leftFootSixAxis" />
-	<xacro:property name="right_foot_ATI_node" value="/right_leg/ankle/left_actuator" />
-	<xacro:property name="right_foot_Sim_ATI_node" value="/sensors/rightFootSixAxis" />
+	<xacro:include filename="$(find val_description)/common/xacro/nodes/regular_nodes.xacro" />
 
 	<xacro:macro name="all_channels" >
 		<Channels>

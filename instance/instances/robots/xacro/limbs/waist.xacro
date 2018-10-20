@@ -1,6 +1,6 @@
-<robot xmlns:xacro="http://ros.org/wiki/xacro" name="waist">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="waist">
 
-    <xacro:include filename="xacro/mechanisms/mechanisms.xacro"/>
+    <xacro:include filename="../mechanisms/mechanisms.xacro"/>
 
     <xacro:macro name="waist" params="j1_serial_number waist_left_actuator_serial waist_right_actuator_serial" >
     	<xacro:simple_mechanism name="torso_yaw" serial_number="${j1_serial_number}" node="${TrunkYawNode}"/>

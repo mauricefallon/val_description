@@ -1,4 +1,4 @@
-<robot xmlns:xacro="http://ros.org/wiki/xacro" name="testbench">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="testbench">
 
 	<xacro:property name="instance" value="testbench" />
     <xacro:include filename="xacro/common/test_bench_template.xacro"/>

@@ -1,4 +1,4 @@
-<robot xmlns:xacro="http://ros.org/wiki/xacro" name="test_bench_template">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="test_bench_template">
 
 	<xacro:include filename="$(find val_description)/common/xacro/serial_numbers/test_bench_serials.xacro" />
 	<xacro:include filename="$(find val_description)/common/xacro/nodes/test_bench_nodes.xacro" />

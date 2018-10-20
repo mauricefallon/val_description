@@ -1,4 +1,4 @@
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="head">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="head">
 
   <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
   <xacro:include filename="$(find val_description)/common/xacro/actuator_names/valkyrie_actuator_names.xacro"/>
@@ -16,7 +16,15 @@
   </xacro:macro>
 
   <xacro:macro name="make_head" params="head_root_link">
-
+    <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/actuator_names/valkyrie_actuator_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/nodes/valkyrie_nodes.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/api/valkyrie_api.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/joint_axes.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/link_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/joint_limits.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/frame_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/mass_parameters.xacro"/>
     <xacro:standard_link name="${LowerNeckPitchLinkName}"
                         mass="${LowerNeckPitchLinkMass}"
                         origin_xyz="${LowerNeckPitchLinkComPosition}"
@@ -77,21 +85,57 @@
 
 
     <xacro:macro name="include_multisense_sim">
+      <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+      <xacro:include filename="$(find val_description)/common/xacro/actuator_names/valkyrie_actuator_names.xacro"/>
+      <xacro:include filename="$(find val_description)/common/xacro/nodes/valkyrie_nodes.xacro"/>
+      <xacro:include filename="$(find val_description)/common/xacro/api/valkyrie_api.xacro"/>
+      <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/joint_axes.xacro"/>
+      <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/link_names.xacro"/>
+      <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/joint_limits.xacro"/>
+      <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/frame_parameters.xacro"/>
+      <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/mass_parameters.xacro"/>
       <xacro:fixed_joint jointName="multisense_head_root_joint" parent="${UpperNeckPitchLinkName}" child="head" origin_xyz="0.183585961 0.0 0.075353826" origin_rpy="-3.14159 0.130899694 0.0" />
     </xacro:macro>
 
     <xacro:macro name="include_multisense_hw">
+      <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+      <xacro:include filename="$(find val_description)/common/xacro/actuator_names/valkyrie_actuator_names.xacro"/>
+      <xacro:include filename="$(find val_description)/common/xacro/nodes/valkyrie_nodes.xacro"/>
+      <xacro:include filename="$(find val_description)/common/xacro/api/valkyrie_api.xacro"/>
+      <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/joint_axes.xacro"/>
+      <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/link_names.xacro"/>
+      <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/joint_limits.xacro"/>
+      <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/frame_parameters.xacro"/>
+      <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/mass_parameters.xacro"/>
       <xacro:massless_virtual_link name="multisense_root_link" origin_xyz="0 0 0" origin_rpy="0 0 0"/>
       <xacro:fixed_joint jointName="multisense_head_root_joint" parent="${UpperNeckPitchLinkName}" child="multisense_root_link" origin_xyz="0.183585961 0.0 0.075353826" origin_rpy="-3.14159 0.130899694 0.0" />
     </xacro:macro>
 
     <xacro:macro name="neck_transmissions_hw">
+      <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+      <xacro:include filename="$(find val_description)/common/xacro/actuator_names/valkyrie_actuator_names.xacro"/>
+      <xacro:include filename="$(find val_description)/common/xacro/nodes/valkyrie_nodes.xacro"/>
+      <xacro:include filename="$(find val_description)/common/xacro/api/valkyrie_api.xacro"/>
+      <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/joint_axes.xacro"/>
+      <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/link_names.xacro"/>
+      <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/joint_limits.xacro"/>
+      <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/frame_parameters.xacro"/>
+      <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/mass_parameters.xacro"/>
       <xacro:simple_transmission jointName="${LowerNeckPitchJointName}" actuatorName="${LowerNeckPitchActuatorName}" nodeName="${LowerNeckPitchNode}" actuatorApi="${LowerNeckPitchApi}"/>
       <xacro:simple_transmission jointName="${NeckYawJointName}" actuatorName="${NeckYawActuatorName}" nodeName="${NeckYawNode}" actuatorApi="${NeckYawApi}"/>
       <xacro:simple_transmission jointName="${UpperNeckPitchJointName}" actuatorName="${UpperNeckPitchActuatorName}" nodeName="${UpperNeckPitchNode}" actuatorApi="${UpperNeckPitchApi}"/>
     </xacro:macro>
 
     <xacro:macro name="neck_transmissions_sim">
+      <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+      <xacro:include filename="$(find val_description)/common/xacro/actuator_names/valkyrie_actuator_names.xacro"/>
+      <xacro:include filename="$(find val_description)/common/xacro/nodes/valkyrie_nodes.xacro"/>
+      <xacro:include filename="$(find val_description)/common/xacro/api/valkyrie_api.xacro"/>
+      <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/joint_axes.xacro"/>
+      <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/link_names.xacro"/>
+      <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/joint_limits.xacro"/>
+      <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/frame_parameters.xacro"/>
+      <xacro:include filename="$(find val_description)/model/robots/common/xacro/head/mass_parameters.xacro"/>
       <xacro:simple_transmission jointName="${LowerNeckPitchJointName}" actuatorName="${LowerNeckPitchActuatorName}" nodeName="${LowerNeckPitchNode}" actuatorApi="${SimApi}"/>
       <xacro:simple_transmission jointName="${NeckYawJointName}" actuatorName="${NeckYawActuatorName}" nodeName="${NeckYawNode}" actuatorApi="${SimApi}"/>
       <xacro:simple_transmission jointName="${UpperNeckPitchJointName}" actuatorName="${UpperNeckPitchActuatorName}" nodeName="${UpperNeckPitchNode}" actuatorApi="${SimApi}"/>

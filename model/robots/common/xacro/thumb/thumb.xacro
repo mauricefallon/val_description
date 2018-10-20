@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="thumb">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="thumb">
   
   <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
   <xacro:include filename="$(find val_description)/model/robots/common/xacro/thumb/joint_axes.xacro"/>
@@ -9,6 +9,12 @@
   <xacro:include filename="$(find val_description)/model/robots/common/xacro/thumb/mass_parameters.xacro"/>
 
   <xacro:macro name="make_thumb" params="prefix reflect thumb_root_link">
+    <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/thumb/joint_axes.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/thumb/link_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/thumb/joint_limits.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/thumb/frame_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/thumb/mass_parameters.xacro"/>
     <xacro:standard_link name="${ThumbRollLinkName}"
                     mass="${ThumbRollLinkMass}"
                     origin_xyz="${ThumbRollLinkComPosition}"
