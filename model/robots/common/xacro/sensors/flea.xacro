@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="flea">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="flea">
 
   <xacro:property name="FleaWidth" value="0.029"/>
   <xacro:property name="FleaHeight" value="0.029"/>

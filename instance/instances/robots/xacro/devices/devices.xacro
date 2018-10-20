@@ -1,4 +1,4 @@
-<robot xmlns:xacro="http://ros.org/wiki/xacro" name="actuators">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="actuators">
 
   <xacro:macro name="imu" params="name serial_number node">
   	<Device id="${name}" type="imu">

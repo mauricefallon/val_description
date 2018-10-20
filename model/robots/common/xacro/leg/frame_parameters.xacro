@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="v1/leg/dh_parameters">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="v1/leg/dh_parameters">
 
   <xacro:property name="HipYawFrameOrigin_X" value="0.0"/>
   <xacro:property name="HipYawFrameOrigin_Y" value="${reflect * 0.1016}"/>

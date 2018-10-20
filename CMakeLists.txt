@@ -47,6 +47,7 @@ foreach(it ${urdf_xacro_files})
   message("produce expanded file :" ${expanded_file})
 
   xacro_add_xacro_file(${it} ${expanded_file})
+  set(_XACRO_INORDER TRUE) 
   
   set(urdf_files ${urdf_files} ${expanded_file})
 endforeach(it)

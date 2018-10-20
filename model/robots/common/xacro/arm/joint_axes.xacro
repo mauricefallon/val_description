@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="torso_joint_rotation_axes">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="torso_joint_rotation_axes">
 
 <xacro:property name="ShoulderPitchRotationAxis" value="0 1 0"/>
 <xacro:property name="ShoulderRollRotationAxis" value="1 0 0"/>

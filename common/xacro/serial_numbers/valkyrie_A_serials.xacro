@@ -1,4 +1,4 @@
-<robot xmlns:xacro="http://ros.org/wiki/xacro" name="valkyrie_A_serials">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="valkyrie_A_serials">
 
 	<xacro:property name="leftLegJ1SerialNumber" value="v_a_006" />
 	<xacro:property name="leftLegJ2SerialNumber" value="v_b_002" />

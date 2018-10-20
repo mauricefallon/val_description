@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="generic_models">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="generic_models">
 
   <xacro:macro name="v1_actuator" params="name api">
     <actuator name="${name}" type="${api}"/>

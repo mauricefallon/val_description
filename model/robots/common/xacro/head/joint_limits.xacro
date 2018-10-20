@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="v1/head/joint_limits">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="v1/head/joint_limits">
   
   <xacro:property name="LowerNeckPitchTorqueLimit" value="26" />
   <xacro:property name="NeckYawTorqueLimit" value="26" />

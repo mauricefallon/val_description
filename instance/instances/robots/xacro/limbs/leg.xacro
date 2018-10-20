@@ -1,10 +1,14 @@
-<robot xmlns:xacro="http://ros.org/wiki/xacro" name="leg">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="leg">
 
     <xacro:include filename="$(find val_description)/instance/instances/robots/xacro/mechanisms/mechanisms.xacro"/>
-    <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
 
     <xacro:macro name="leg" params="prefix j1_serial_number j2_serial_number j3_serial_number j4_serial_number ankle_left_actuator_serial ankle_right_actuator_serial" >
-    	<xacro:simple_mechanism name="${HipYawJointName}" serial_number="${j1_serial_number}" node="${HipYawNode}"/>
+
+        <xacro:include filename="$(find val_description)/common/xacro/nodes/valkyrie_nodes.xacro" />
+
+        <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+
+        <xacro:simple_mechanism name="${HipYawJointName}" serial_number="${j1_serial_number}" node="${HipYawNode}"/>
 
     	<xacro:simple_mechanism name="${HipRollJointName}" serial_number="${j2_serial_number}" node="${HipRollNode}"/>
 

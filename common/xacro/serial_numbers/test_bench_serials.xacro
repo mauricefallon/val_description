@@ -1,4 +1,4 @@
-<robot xmlns:xacro="http://ros.org/wiki/xacro" name="test_bench_serials">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="test_bench_serials">
 
 	<xacro:property name="testbench_serial_number" value="v_a_013" />
     

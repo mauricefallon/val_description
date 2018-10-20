@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="middle_finger">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="middle_finger">
 
   <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
   <xacro:include filename="$(find val_description)/model/robots/common/xacro/middle_finger/joint_axes.xacro"/>
@@ -9,7 +9,12 @@
   <xacro:include filename="$(find val_description)/model/robots/common/xacro/middle_finger/mass_parameters.xacro"/>
 
   <xacro:macro name="make_middle_finger" params="prefix reflect middle_finger_root_link">
-
+    <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/middle_finger/joint_axes.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/middle_finger/link_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/middle_finger/joint_limits.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/middle_finger/frame_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/middle_finger/mass_parameters.xacro"/>
     <xacro:standard_link name="${MiddleFingerPitch1LinkName}" 
                     mass="${MiddleFingerPitch1LinkMass}" 
                     origin_xyz="${MiddleFingerPitch1ComPosition}"
@@ -78,10 +83,22 @@
   </xacro:macro>
 
   <xacro:macro name="v1_right_middle_finger_actuators" params="prefix api">
+    <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/middle_finger/joint_axes.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/middle_finger/link_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/middle_finger/joint_limits.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/middle_finger/frame_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/middle_finger/mass_parameters.xacro"/>
     <xacro:v1_actuator name="${RMFA_Actuator_Name}" api="${api}" />
   </xacro:macro>
 
   <xacro:macro name="v1_left_middle_finger_actuators" params="prefix api">
+    <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/middle_finger/joint_axes.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/middle_finger/link_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/middle_finger/joint_limits.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/middle_finger/frame_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/middle_finger/mass_parameters.xacro"/>
     <xacro:v1_actuator name="${LMFA_Actuator_Name}" api="${api}" />
   </xacro:macro>
 

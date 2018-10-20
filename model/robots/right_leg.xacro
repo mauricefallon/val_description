@@ -1,4 +1,4 @@
-<robot xmlns:xacro="http://ros.org/wiki/xacro" name="right_leg">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="right_leg">
 
     <xacro:property name="mesh_root" value="package://val_description/model/meshes"/>
     <xacro:include filename="$(find val_description)/model/robots/common/xacro/generic_models.xacro" />

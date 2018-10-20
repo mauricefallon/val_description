@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="leg">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="leg">
   <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
   <xacro:include filename="$(find val_description)/common/xacro/actuator_names/valkyrie_actuator_names.xacro"/>
   <xacro:include filename="$(find val_description)/common/xacro/nodes/valkyrie_nodes.xacro"/>
@@ -12,6 +12,16 @@
   <xacro:include filename="$(find val_description)/model/robots/common/xacro/sensors/ati_force_torque.xacro"/>
 
   <xacro:macro name="make_leg_links" params="prefix reflect leg_root_link">
+    <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/actuator_names/valkyrie_actuator_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/nodes/valkyrie_nodes.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/api/valkyrie_api.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/joint_axes.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/link_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/joint_limits.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/frame_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/mass_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/sensors/ati_force_torque.xacro"/>
     <xacro:standard_link name="${HipYawLinkName}"
                     mass="${HipYawLinkMass}"
                     origin_xyz="${HipYawLinkComPosition}" origin_rpy="0 0 0" 
@@ -72,8 +82,18 @@
   </xacro:macro>
 
   <xacro:macro name="make_leg_joints" params="prefix reflect leg_root_link">
+    <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/actuator_names/valkyrie_actuator_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/nodes/valkyrie_nodes.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/api/valkyrie_api.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/joint_axes.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/link_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/joint_limits.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/frame_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/mass_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/sensors/ati_force_torque.xacro"/>
     <xacro:revolute_joint_ex jointName="${HipYawJointName}"
-                          parent="${HipYawParentLinkName}" child="${HipYawLinkName}"
+                          parent="${leg_root_link}" child="${HipYawLinkName}"
                           origin_xyz="${HipYawFrameOrigin_X} ${HipYawFrameOrigin_Y} ${HipYawFrameOrigin_Z}"
                           origin_rpy="${HipYawFrameOrientation_Roll} ${HipYawFrameOrientation_Pitch} ${HipYawFrameOrientation_Yaw}" 
                           axis="${HipYawRotationAxis}"
@@ -124,6 +144,16 @@
   </xacro:macro>
 
   <xacro:macro name="make_ankle_joints" params="prefix reflect leg_root_link">
+    <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/actuator_names/valkyrie_actuator_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/nodes/valkyrie_nodes.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/api/valkyrie_api.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/joint_axes.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/link_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/joint_limits.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/frame_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/mass_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/sensors/ati_force_torque.xacro"/>
 
     <xacro:revolute_joint_ex jointName="${AnklePitchJointName}"
                           parent="${KneePitchLinkName}" child="${AnklePitchLinkName}"
@@ -147,12 +177,32 @@
   </xacro:macro>
 
   <xacro:macro name="make_leg" params="prefix reflect leg_root_link">
+    <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/actuator_names/valkyrie_actuator_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/nodes/valkyrie_nodes.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/api/valkyrie_api.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/joint_axes.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/link_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/joint_limits.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/frame_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/mass_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/sensors/ati_force_torque.xacro"/>
     <xacro:make_leg_links prefix="${prefix}" reflect="${reflect}" leg_root_link="${leg_root_link}" />
     <xacro:make_leg_joints prefix="${prefix}" reflect="${reflect}" leg_root_link="${leg_root_link}" />
     <xacro:make_ankle_joints prefix="${prefix}" reflect="${reflect}" leg_root_link="${leg_root_link}" />
   </xacro:macro>
 
   <xacro:macro name="v1_leg_sensors" params="prefix reflect ATI_serial_number ATI_node">
+    <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/actuator_names/valkyrie_actuator_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/nodes/valkyrie_nodes.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/api/valkyrie_api.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/joint_axes.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/link_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/joint_limits.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/frame_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/mass_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/sensors/ati_force_torque.xacro"/>
 
     <xacro:virtual_fixed_frame_offset name="${prefix}COP"
                        parentLink="${AnkleRollLinkName}"
@@ -170,6 +220,16 @@
   </xacro:macro>
 
   <xacro:macro name="leg_transmissions_hw" params="prefix">
+    <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/actuator_names/valkyrie_actuator_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/nodes/valkyrie_nodes.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/api/valkyrie_api.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/joint_axes.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/link_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/joint_limits.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/frame_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/mass_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/sensors/ati_force_torque.xacro"/>
     <xacro:simple_transmission jointName="${HipYawJointName}" actuatorName="${HipYawActuatorName}" nodeName="${HipYawNode}" actuatorApi="${HipYawApi}"/>
     <xacro:simple_transmission jointName="${HipRollJointName}" actuatorName="${HipRollActuatorName}" nodeName="${HipRollNode}" actuatorApi="${HipRollApi}"/>
     <xacro:simple_transmission jointName="${HipPitchJointName}" actuatorName="${HipPitchActuatorName}" nodeName="${HipPitchNode}" actuatorApi="${HipPitchApi}"/>
@@ -178,6 +238,16 @@
   </xacro:macro>
 
   <xacro:macro name="leg_transmissions_sim" params="prefix">
+    <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/actuator_names/valkyrie_actuator_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/nodes/valkyrie_nodes.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/api/valkyrie_api.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/joint_axes.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/link_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/joint_limits.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/frame_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/leg/mass_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/sensors/ati_force_torque.xacro"/>
     <xacro:simple_transmission jointName="${HipYawJointName}" actuatorName="${HipYawActuatorName}" nodeName="${HipYawNode}" actuatorApi="${SimApi}"/>
     <xacro:simple_transmission jointName="${HipRollJointName}" actuatorName="${HipRollActuatorName}" nodeName="${HipRollNode}" actuatorApi="${SimApi}"/>
     <xacro:simple_transmission jointName="${HipPitchJointName}" actuatorName="${HipPitchActuatorName}" nodeName="${HipPitchNode}" actuatorApi="${SimApi}"/>

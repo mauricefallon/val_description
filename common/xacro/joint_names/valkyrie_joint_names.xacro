@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<robot name="valkyrie_joint_names" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="valkyrie_joint_names" xmlns:xacro="http://wiki.ros.org/xacro">
 	<xacro:property name="TorsoYawJointName" value="torsoYaw"/>
 	<xacro:property name="TorsoPitchJointName" value="torsoPitch"/>
 	<xacro:property name="TorsoRollJointName" value="torsoRoll"/>

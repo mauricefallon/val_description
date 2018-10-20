@@ -1,19 +1,18 @@
 <?xml version="1.0" ?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="arm">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="arm">
 
-  <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
-  <xacro:include filename="$(find val_description)/common/xacro/actuator_names/valkyrie_actuator_names.xacro"/>
-  <xacro:include filename="$(find val_description)/common/xacro/nodes/valkyrie_nodes.xacro"/>
-  <xacro:include filename="$(find val_description)/common/xacro/api/valkyrie_api.xacro"/>
-  <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/joint_axes.xacro"/>
-  <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/link_names.xacro"/>
-  <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/joint_limits.xacro"/>
-  <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/frame_parameters.xacro"/>
-  <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/mass_parameters.xacro"/>
 
   <xacro:macro name="make_upper_arm" params="prefix reflect upper_arm_root_link">
-
-    <xacro:standard_link name="${ShoulderPitchLinkName}"
+    <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/actuator_names/valkyrie_actuator_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/joint_axes.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/api/valkyrie_api.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/nodes/valkyrie_nodes.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/joint_limits.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/frame_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/link_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/mass_parameters.xacro"/>
+    <xacro:standard_link name="${ShoulderRollLinkName}"
                     mass="${ShoulderPitchLinkMass}"
                     origin_xyz="${ShoulderPitchLinkComPosition}" origin_rpy="0 0 0"
                     ixx="${ShoulderPitchLinkInertia_IXX}" ixy="${ShoulderPitchLinkInertia_IXY}" ixz="${ShoulderPitchLinkInertia_IXZ}"
@@ -49,7 +48,7 @@
                     collision_mesh="${mesh_root}/arms/aj4_${prefix}.dae" />
 
     <xacro:revolute_joint_ex jointName="${ShoulderPitchJointName}"
-                          parent="${upper_arm_root_link}" child="${ShoulderPitchLinkName}"
+                          parent="${upper_arm_root_link}" child="${ShoulderRollLinkName}"
                           origin_xyz="${ShoulderPitchFrameOrigin_X} ${ShoulderPitchFrameOrigin_Y} ${ShoulderPitchFrameOrigin_Z}"
                           origin_rpy="${ShoulderPitchFrameOrientation_Roll} ${ShoulderPitchFrameOrientation_Pitch} ${ShoulderPitchFrameOrientation_Yaw}" 
                           axis="${ShoulderPitchRotationAxis}"
@@ -59,7 +58,7 @@
     </xacro:revolute_joint_ex>
 
     <xacro:revolute_joint_ex jointName="${ShoulderRollJointName}"
-                          parent="${ShoulderPitchLinkName}" child="${ShoulderRollLinkName}"
+                          parent="${ShoulderRollLinkName}" child="${ShoulderRollLinkName}"
                           origin_xyz="${ShoulderRollFrameOrigin_X} ${ShoulderRollFrameOrigin_Y} ${ShoulderRollFrameOrigin_Z}"
                           origin_rpy="${ShoulderRollFrameOrientation_Roll} ${ShoulderRollFrameOrientation_Pitch} ${ShoulderRollFrameOrientation_Yaw}" 
                           axis="${ShoulderRollRotationAxis}"
@@ -101,6 +100,15 @@
 
 
   <xacro:macro name="make_lower_arm" params="prefix reflect lower_arm_root_link">
+    <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/actuator_names/valkyrie_actuator_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/joint_axes.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/api/valkyrie_api.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/nodes/valkyrie_nodes.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/joint_limits.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/frame_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/link_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/mass_parameters.xacro"/>
     <xacro:standard_link name="${ForearmLinkName}"
                     mass="${ForearmYawLinkMass}"
                     origin_xyz="${ForearmYawLinkComPosition}"
@@ -170,15 +178,42 @@
   </xacro:macro>
 
   <xacro:macro name="make_arm" params="prefix reflect arm_root_link">
+    <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/actuator_names/valkyrie_actuator_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/joint_axes.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/api/valkyrie_api.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/nodes/valkyrie_nodes.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/joint_limits.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/frame_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/link_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/mass_parameters.xacro"/>
     <xacro:make_upper_arm prefix="${prefix}" reflect="${reflect}" upper_arm_root_link="${arm_root_link}" />
     <xacro:make_lower_arm prefix="${prefix}" reflect="${reflect}" lower_arm_root_link="${ElbowPitchLinkName}" />
   </xacro:macro>
 
   <xacro:macro name="make_arm_no_hands" params="prefix reflect arm_root_link">
+    <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/actuator_names/valkyrie_actuator_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/joint_axes.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/api/valkyrie_api.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/nodes/valkyrie_nodes.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/joint_limits.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/frame_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/link_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/mass_parameters.xacro"/>
     <xacro:make_upper_arm prefix="${prefix}" reflect="${reflect}" upper_arm_root_link="${arm_root_link}" />
   </xacro:macro>
 
   <xacro:macro name="arm_transmissions_hw" params="prefix">
+    <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/actuator_names/valkyrie_actuator_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/joint_axes.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/api/valkyrie_api.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/nodes/valkyrie_nodes.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/joint_limits.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/frame_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/link_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/mass_parameters.xacro"/>
     <xacro:simple_transmission jointName="${ShoulderPitchJointName}" actuatorName="${ShoulderPitchActuatorName}" nodeName="${ShoulderPitchNode}" actuatorApi="${ShoulderPitchApi}"/>
     <xacro:simple_transmission jointName="${ShoulderRollJointName}" actuatorName="${ShoulderRollActuatorName}" nodeName="${ShoulderRollNode}" actuatorApi="${ShoulderRollApi}"/>
     <xacro:simple_transmission jointName="${ShoulderYawJointName}" actuatorName="${ShoulderYawActuatorName}" nodeName="${ShoulderYawNode}" actuatorApi="${ShoulderYawApi}"/>
@@ -188,6 +223,15 @@
   </xacro:macro>
 
   <xacro:macro name="arm_transmissions_no_hands" params="prefix">
+    <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/actuator_names/valkyrie_actuator_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/joint_axes.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/api/valkyrie_api.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/nodes/valkyrie_nodes.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/joint_limits.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/frame_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/link_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/mass_parameters.xacro"/>
     <xacro:simple_transmission jointName="${ShoulderPitchJointName}" actuatorName="${ShoulderPitchActuatorName}" nodeName="${ShoulderPitchNode}" actuatorApi="${ShoulderPitchApi}"/>
     <xacro:simple_transmission jointName="${ShoulderRollJointName}" actuatorName="${ShoulderRollActuatorName}" nodeName="${ShoulderRollNode}" actuatorApi="${ShoulderRollApi}"/>
     <xacro:simple_transmission jointName="${ShoulderYawJointName}" actuatorName="${ShoulderYawActuatorName}" nodeName="${ShoulderYawNode}" actuatorApi="${ShoulderYawApi}"/>
@@ -195,6 +239,15 @@
   </xacro:macro>
 
   <xacro:macro name="arm_transmissions_sim" params="prefix">
+    <xacro:include filename="$(find val_description)/common/xacro/joint_names/valkyrie_joint_names.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/actuator_names/valkyrie_actuator_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/joint_axes.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/api/valkyrie_api.xacro"/>
+    <xacro:include filename="$(find val_description)/common/xacro/nodes/valkyrie_nodes.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/joint_limits.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/frame_parameters.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/link_names.xacro"/>
+    <xacro:include filename="$(find val_description)/model/robots/common/xacro/arm/mass_parameters.xacro"/>
     <xacro:simple_transmission jointName="${ShoulderPitchJointName}" actuatorName="${ShoulderPitchActuatorName}" nodeName="${ShoulderPitchNode}" actuatorApi="${SimApi}"/>
     <xacro:simple_transmission jointName="${ShoulderRollJointName}" actuatorName="${ShoulderRollActuatorName}" nodeName="${ShoulderRollNode}" actuatorApi="${SimApi}"/>
     <xacro:simple_transmission jointName="${ShoulderYawJointName}" actuatorName="${ShoulderYawActuatorName}" nodeName="${ShoulderYawNode}" actuatorApi="${SimApi}"/>

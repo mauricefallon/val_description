@@ -1,4 +1,4 @@
-<robot xmlns:xacro="http://ros.org/wiki/xacro" name="imu">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="imu">
 
 	<xacro:macro name="ati_force_torque" params="name serial_number node">
 		<Device id="${name}" type="force_torque">
